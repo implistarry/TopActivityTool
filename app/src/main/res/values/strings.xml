@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">TopActivityTool</string>
+    <string name="tile_label">TopActivity</string>
+    <string name="permission_overlay">授权悬浮窗权限</string>
+    <string name="permission_usage_stats">授权使用情况访问权限</string>
+    <string name="permission_notification">授权通知权限</string>
+    <string name="start_service">启动服务</string>
+    <string name="stop_service">停止服务</string>
+    <string name="waiting_info">等待Activity信息…</string>
+    <string name="monitor_running">Activity监控运行中</string>
+    <string name="monitor_desc">正在监控当前顶部Activity</string>
+    <string name="stop">停止</string>
+    <string name="zoom_in">放大</string>
+    <string name="zoom_out">缩小</string>
+    <string name="history">历史记录</string>
+    <string name="close">关闭</string>
+</resources>

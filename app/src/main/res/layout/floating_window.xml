@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:alpha="0.93"
+    android:background="@drawable/floating_window_bg"
+    android:minWidth="200dp"
+    android:orientation="vertical">
+
+    <!-- Title bar / drag area -->
+    <LinearLayout
+        android:id="@+id/dragArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/floating_title_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="4dp">
+
+        <ImageButton
+            android:id="@+id/btnClose"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/close"
+            android:padding="3dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_close" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="#FFFFFFFF"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnHistory"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginEnd="2dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/history"
+            android:padding="3dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_history" />
+
+        <ImageButton
+            android:id="@+id/btnZoomOut"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginEnd="2dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/zoom_out"
+            android:padding="3dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_zoom_out" />
+
+        <ImageButton
+            android:id="@+id/btnZoomIn"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/zoom_in"
+            android:padding="3dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_zoom_in" />
+
+    </LinearLayout>
+
+    <!-- Activity info content -->
+    <TextView
+        android:id="@+id/tvActivityInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:lineSpacingExtra="2dp"
+        android:maxWidth="400dp"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="6dp"
+        android:text="@string/waiting_info"
+        android:textColor="#E0E0E0"
+        android:textSize="12sp" />
+
+    <!-- History header (divider + clear button) -->
+    <LinearLayout
+        android:id="@+id/historyHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="2dp"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#33FFFFFF" />
+
+        <TextView
+            android:id="@+id/btnClearHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="2dp"
+            android:text="清空"
+            android:textColor="#FF8A80"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <!-- History content -->
+    <ScrollView
+        android:id="@+id/historyScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="200dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:lineSpacingExtra="1dp"
+            android:maxWidth="400dp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:textColor="#99E0E0E0"
+            android:textSize="10sp" />
+
+    </ScrollView>
+
+</LinearLayout>
